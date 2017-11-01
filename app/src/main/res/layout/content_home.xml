@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+tools:context="com.sanju.chat.vidschat.Activities.HomeActivity"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+    >
+
+<com.sanju.chat.vidschat.customview.MyNestedScrollView
+    android:id="@+id/nested_scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:orientation="vertical">
+        <com.sanju.chat.vidschat.customview.WrapContentHeightViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+    </LinearLayout>
+
+
+
+</com.sanju.chat.vidschat.customview.MyNestedScrollView>
+
+
+<android.support.design.widget.AppBarLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    <android.support.design.widget.CollapsingToolbarLayout
+        android:id="@+id/toolbarCollapse"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        app:contentScrim="?attr/colorPrimary"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+
+
+        <LinearLayout
+            android:id="@+id/llayout_bg_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/darkPurple"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                android:minHeight="69dp"
+                android:elevation="1dp" />
+
+
+            <RelativeLayout
+                android:id="@+id/rlayout_user_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/background">
+
+                <RelativeLayout
+                    android:id="@+id/rlayout_profile_img_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.sanju.chat.vidschat.Utiles.RoundedNetworkImageView
+                        android:id="@+id/rounded_img_view_profile"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_centerHorizontal="true"/>
+
+
+                    <ImageView
+                        android:id="@+id/img_btn_change_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/camera"
+                        android:alpha="0.5"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="118dp"
+
+                        />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlayout_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_below="@+id/rlayout_profile_img_view">
+                    <TextView
+                        android:id="@+id/txt_view_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textStyle="bold"
+                        android:textSize="25sp"
+                        android:layout_marginLeft="32dp"
+                        android:textColor="@color/blue"
+                        />
+                    <ImageButton
+                        android:id="@+id/img_btn_profile_edit"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_toRightOf="@+id/txt_view_name"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/edit_icon_default"
+                        />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/txt_view_name2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rlayout_name"
+                    android:text=""
+                    android:gravity="center_horizontal"
+                    android:textSize="20sp"
+                    android:textColor="@color/blue"
+                    />
+                <LinearLayout
+                    android:id="@+id/llayout_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edit_txt_vw_height"
+                    android:layout_below="@+id/txt_view_name2"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    >
+
+                    <ImageView
+                        android:visibility="invisible"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/location_pin_default"
+                        android:contentDescription="" />
+                    <TextView
+                        android:id="@+id/txt_view_user_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:minLines="1"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="20sp"
+                        android:text=""/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </android.support.design.widget.CollapsingToolbarLayout>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:tabGravity="fill"
+        app:tabMaxWidth="0dp"
+        app:tabMode="fixed"
+        />
+
+</android.support.design.widget.AppBarLayout>
+</android.support.design.widget.CoordinatorLayout>
+
+
+

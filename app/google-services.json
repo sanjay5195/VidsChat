@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "117784798759",
+    "firebase_url": "https://vidschat-8f86b.firebaseio.com",
+    "project_id": "vidschat-8f86b",
+    "storage_bucket": "vidschat-8f86b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:117784798759:android:1be1ff0e4f5af0ea",
+        "android_client_info": {
+          "package_name": "com.sanju.chat.vidschat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "117784798759-oacsv5ld1e4cmr8ou7ua232gq3il0l61.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sanju.chat.vidschat",
+            "certificate_hash": "5E18467AB8D51BE7656DE0BE14F0BD7685585B91"
+          }
+        },
+        {
+          "client_id": "117784798759-otnoaup33pa6cbnrdjnn31ua1dajfv59.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sanju.chat.vidschat",
+            "certificate_hash": "5EF1D533D802D309969AB891E99ADD1396439EB7"
+          }
+        },
+        {
+          "client_id": "117784798759-jqstrdehf5bj3ikb5ktv8fcuu08odulb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQa3a1tHhlrEQ8WJpuKqPuS_1arJuKt1A"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "117784798759-jqstrdehf5bj3ikb5ktv8fcuu08odulb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
